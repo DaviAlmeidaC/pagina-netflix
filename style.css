@@ -1,0 +1,214 @@
+:root{
+    --branco-principal: #FFFFFF;/*criação de variavel com cor, que vacilita o entendimento para o uso da cor e a manutenção tmb*/
+    --cinca-secundario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --cor-de-fundo: #00030C;
+    --fonte-principal: 'inter';/*é o nome da fonte a qual tem esse nome de chamada, e ela foi colocada em uma variavel*/
+    --botao-azul-efeito: #1060c2;
+}/*esses vao ser os nomes das cores agora, tudo que eu quiser que tenha essa cor, é so chamar pelo o nome*/
+
+body{
+    background-color: var(--cor-de-fundo);/*chamou a variavel com a cor, var é a função que chama*/
+    color: var(--branco-principal);/*deixa tudo automaticamente com a cor branca*/
+    font-family: var(--fonte-principal);/*vai ser colocado essa fonte em tudo*/
+    font-size: 16px;/*vai ser colocado esse tamanho e fonte em tudo*/
+    font-weight: 400;/*é a força da fonte, por exemplo, o 700 é um negrito, e deixa em tudo*/
+}
+
+*{/*esse (*) ele pega todos os elementos html e css, e oq eu botar nessa aba, sera aplicado a todos os elemntos*/
+    margin: 0;
+    padding: 0;
+}
+
+.principal{
+    background-image: url(Background.png);/*botei a imagem de fundo dentro da classe principal , a section*/
+    /*o background-image, ele e responsavel por botar uma imagem, mas nao uma imagem tao importante, so para estilizar, entao ele nao precisa da tag para dizer oq é, diferente da imagem combo, e nao muda o tamanhoda imagem com um zoom*/
+    background-repeat: no-repeat;/*dizendo para a imagem, nao repetir caso ela fique maior que ela mesma*/
+    background-size: contain;
+    align-items: center;/*deixa tudo alinhado no centro, em relação vertical*/
+    text-align: center;/*deixa as palavras ou os textos alinhados no centro e tudo que aline no centro tmb*/
+}
+
+.container{
+    height: 100vh;/*é a tag e a forma de medida para altura, e o vh view port height, que seria a altura da pagina, ele detecta o tamanho e ocupa 100% dela, e isso faz ocupar a tela inteira*/
+    display: grid;
+    grid-template-columns: 50% 50%;/*dividi no meio da tela*/
+}
+
+.container__botao{
+    background-color: var(--botao-azul);/*chamou a variavel que tem a cor azul do botao*/
+    border-radius: 5px;/*arredoda as bodas*/
+    padding: 1em;/*é o tamanho interno*/
+    color: var(--branco-principal);/*deixou o nome branco*/
+    display: block;/*ocupa todo o bloco, que seria a imagem toda*/
+    text-decoration: none;/*tirar a barrinha azul ou que decora um link*/
+    margin: 1em;/*apliquei margin em tudo, que é o espaçamento do botao*/
+}
+
+.botao_secundario{
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+   
+    border-radius: 5px;/*arredoda as bodas*/
+    padding: 1em;/*é o tamanho interno*/
+    color: var(--branco-principal);/*deixou o nome branco*/
+    display: block;/*ocupa todo o bloco, que seria a imagem toda*/
+    text-decoration: none;/*tirar a barrinha azul ou que decora um link*/
+    margin: 1em;/*apliquei margin em tudo, que é o espaçamento do botao*/
+}
+
+.container__aviso{
+    font-size: 12px;/*tamamnho da fonte pequena*/
+    color: var(--cinca-secundario);/*cor da fonte pequena*/
+    margin: -0.5em 1.5em;/*a distancia de cada item*/
+}
+
+.container__titulo{
+    font-size: 28px;/*tamamho*/
+    font-weight: 700;/*peso, negrito*/
+}
+
+.container__imagem{
+    margin: 1em 0 2em 0;
+}
+
+.container__caixa{
+    margin: 0 6em;/*o primeiro 0 é o topo e o baixo, e o 6em, e a esquerda e a direita*/
+}
+
+.secundario__imagem{
+    width: 80%;/*ele vai ocupar 80% da coluna dele*/
+}
+
+.secundario{
+    align-items: center;/*alinhei os itens no centro*/
+    margin: 0 10em;
+}
+
+.descricao__titulo{
+    font-weight: 700;/*deixei em negrito*/
+    font-size: 48px;/*tamanho da fonte*/
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;/*distancia de baixo dele com o titulo e as informações em baixo*/
+}
+
+.descricao__texto{
+    color: var(--cinca-secundario);
+}
+
+.secundario__botao{
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.container__descricao{
+    padding: 2em;
+}
+
+.dispositivos__lista{
+    display: flex;/*ele transforma em flex container, e os filhos da lista em um flex itens, e ele ja tem uma direçao patrão, que é em linha (row), logo um no lado do outro as listas*/
+    justify-content: center;/*deixa tudo do display no centro*/
+    list-style-type: none;/*tiro as bolinhas que é criado automaticamente em cada lista para diferenciar*/
+    margin: 5em 0;/*primeira cima e baixo, depois lado e outro, esse cuida das imagens e a distancia do titulo*/
+}
+
+.dispositivos{
+    text-align: center;/*pega todos os elementos inlines e deixa centralizado*/
+}
+
+.dispositivos__titulo{
+    font-size: 48px;
+    color: var(--branco-principal);
+}
+
+.lista__item{
+    font-size: 32px;
+    color: var(--branco-principal);
+}
+
+.rodape{
+    text-align: center;
+}
+
+.rodape__logo{
+    margin: 3em 0 0.7em 0;
+}
+
+.listas__link{
+    color: var(--branco-principal);
+    text-decoration: none;
+    list-style-type: none;
+    margin: 2em 0.5em;
+}
+
+.rodape__lista{
+    display: flex;
+    justify-content: center;
+}
+
+.rodape__texto1{
+    margin: 0.3em 0 2em 0;
+    color: #C0C0C0;
+}
+
+.rodape__texto2{
+    margin: 0 2em 6em 0;
+    color: #C0C0C0;
+}
+
+.listas__link:hover{/*tag que quando o mouse passar por cima do nome, ele ira mudar de cor*/
+    color: var(--botao-azul);
+}
+
+.listas__link:active{/*muda quando for clicado, isso sao pseudoclasses do css*/
+    color: #cec8c8;
+}
+
+.container__botao:hover{
+    background-color: var(--botao-azul-efeito);
+    color: #00030C;
+    transform: scale(1.03);/*da um zoom ao passar com o mouse*/
+    transition: 0.2s all;/*faz uma transição mais suave quando se da um zoom com o mouse*/
+}
+
+.botao_secundario:hover{
+    color: var(--botao-azul-efeito);
+    transform: scale(1.03);/*da um zoom ao passar com o mouse*/
+    transition: 0.2s all;
+}
+
+@media screen and (max-width: 768px){
+    .container{
+        display: block;
+        background-image: none;
+    }
+
+    .container__imagem{
+        width: 50vw;
+    }
+
+    .container__caixa{
+        margin: 2em 2em;/*diminui a margem da parte principal*/
+    }
+
+    .secundario{
+        margin: 0;/*tirei a margin*/
+        text-align: center;
+    }
+
+    .secundario__imagem{
+        width: 50vw;
+    }
+
+    .dispositivos__lista{
+        display: block;
+    }
+
+    .rodape__lista{
+        display: block;
+    }
+
+    .rodape__texto2{
+        margin: 0 1em 2em 1em;
+    }
+}
